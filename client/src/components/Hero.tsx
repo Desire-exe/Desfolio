@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowRight, Github } from 'lucide-react'
 import { fadeUp, letter, letterContainer, stagger } from '@/lib/motion'
-import { GlowDot } from './ui/GlowDot'
 import { Typewriter } from './Typewriter'
 import { useMagnetic } from '@/hooks/useMagnetic'
 
@@ -69,14 +68,10 @@ export function Hero() {
           className="font-sans text-base md:text-lg text-text-muted mt-8 max-w-xl leading-relaxed"
         >
           <Typewriter
-            text="I build web products end to end — React on the front, Node and PostgreSQL on the back. Currently building "
+            text="I build web products end to end — React on the front, Node and PostgreSQL on the back."
             speed={18}
             delay={1400}
           />
-          <span className="text-text">FluxMeet</span>
-          <span className="inline-flex ml-1.5 align-middle">
-            <GlowDot />
-          </span>
         </motion.p>
 
         <motion.div variants={fadeUp} className="flex flex-wrap gap-3 mt-12">

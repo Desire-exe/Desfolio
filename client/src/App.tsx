@@ -4,7 +4,6 @@ import { useEffect } from 'react'
 
 import { Aurora } from './components/Aurora'
 import { EmberParticles } from './components/EmberParticles'
-import { Preloader } from './components/Preloader'
 import { PageTransition } from './components/PageTransition'
 import { Nav } from './components/Nav'
 import { Footer } from './components/Footer'
@@ -29,7 +28,6 @@ export default function App() {
 
   return (
     <div className="relative min-h-screen bg-bg text-text overflow-x-hidden">
-      <Preloader />
       <Aurora />
       <EmberParticles />
       <Nav />
@@ -37,12 +35,12 @@ export default function App() {
 
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
-          <Route path="/"                element={<PageTransition><Home /></PageTransition>} />
-          <Route path="/projects"        element={<PageTransition><ProjectsPage /></PageTransition>} />
-          <Route path="/projects/:id"    element={<PageTransition><ProjectDetail /></PageTransition>} />
-          <Route path="/about"           element={<PageTransition><AboutPage /></PageTransition>} />
-          <Route path="/contact"         element={<PageTransition><ContactPage /></PageTransition>} />
-          <Route path="*"                element={<PageTransition><NotFound /></PageTransition>} />
+          <Route path="/"             element={<PageTransition><Home /></PageTransition>} />
+          <Route path="/projects"     element={<PageTransition><ProjectsPage /></PageTransition>} />
+          <Route path="/projects/:id" element={<PageTransition><ProjectDetail /></PageTransition>} />
+          <Route path="/about"        element={<PageTransition><AboutPage /></PageTransition>} />
+          <Route path="/contact"      element={<PageTransition><ContactPage /></PageTransition>} />
+          <Route path="*"             element={<PageTransition><NotFound /></PageTransition>} />
         </Routes>
       </AnimatePresence>
 

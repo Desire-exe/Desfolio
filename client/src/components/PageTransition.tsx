@@ -19,9 +19,10 @@ export function PageTransition({ children }: Props) {
       <AnimatePresence>
         {flashing && (
           <motion.div
-            initial={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
             className="fixed inset-0 z-[150] bg-bg flex flex-col items-center justify-center pointer-events-none px-6"
           >
             <motion.img
@@ -47,10 +48,16 @@ export function PageTransition({ children }: Props) {
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
-              className="font-serif italic text-3xl md:text-4xl mt-3 text-center bg-clip-text text-transparent animate-gradient"
+              className="font-serif italic text-3xl md:text-4xl mt-3 text-center"
               style={{
-                backgroundImage: 'linear-gradient(90deg, #FF3B3B 0%, #FF6B4A 50%, #FF3B3B 100%)',
+                backgroundImage:
+                  'linear-gradient(90deg, #FF3B3B 0%, #FF6B4A 50%, #FF3B3B 100%)',
                 backgroundSize: '200% 100%',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                color: 'transparent',
+                animation: 'gradient-shift 3s ease-in-out infinite',
               }}
             >
               DΞSIRΞ-ΞXΞ?
