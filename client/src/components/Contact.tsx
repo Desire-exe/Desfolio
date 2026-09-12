@@ -5,6 +5,8 @@ import { SectionEyebrow } from './SectionEyebrow'
 
 type Status = 'idle' | 'loading' | 'ok' | 'error'
 
+const API_URL = import.meta.env.VITE_API_URL ?? ''
+
 export function Contact() {
   const [status, setStatus] = useState<Status>('idle')
 
@@ -13,8 +15,9 @@ export function Contact() {
     setStatus('loading')
     const form = e.currentTarget
     const data = Object.fromEntries(new FormData(form).entries())
+
     try {
-      const res = await fetch('/api/contact', {
+      const res = await fetch(`${API_URL}/api/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),

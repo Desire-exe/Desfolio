@@ -68,7 +68,7 @@ export function Hero() {
           className="font-sans text-base md:text-lg text-text-muted mt-8 max-w-xl leading-relaxed"
         >
           <Typewriter
-            text="I build web products end to end — React on the front, Node and PostgreSQL on the back."
+            text="I build web products end to end · React on the front, Node and PostgreSQL on the back."
             speed={18}
             delay={1400}
           />
