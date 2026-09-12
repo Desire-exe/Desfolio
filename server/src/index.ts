@@ -11,10 +11,12 @@ const PORT = Number(process.env.PORT ?? 3001)
 app.set('trust proxy', 1)
 
 const allowedOrigins = [
-  process.env.FRONTEND_URL ?? 'http://localhost:5173',
-  'https://desire.my.id',
-  'https://www.desire.my.id',
-]
+  'http://localhost:5173',
+  'http://localhost:4173',
+  process.env.FRONTEND_URL,
+  'https://desire-exe.my.id',
+  'https://www.desire-exe.my.id',
+].filter(Boolean) as string[]
 
 app.use(
   cors({
