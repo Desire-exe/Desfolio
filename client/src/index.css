@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-bg text-text font-sans antialiased;
+}
+
+::selection {
+  @apply bg-accent text-bg;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0708;
+}
+::-webkit-scrollbar-thumb {
+  background: #1c1214;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2a1a1d;
+}
+
+/* Animated fiery gradient — used for strength bars */
+.bg-gradient-animated {
+  background: linear-gradient(
+    90deg,
+    #ff3b3b 0%,
+    #ff6b4a 35%,
+    #ff8a00 65%,
+    #ff3b3b 100%
+  );
+  background-size: 200% 100%;
+  animation: gradient-shift 3s ease-in-out infinite;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Fallback for browsers that can't do background-clip: text */
+@supports not ((background-clip: text) or (-webkit-background-clip: text)) {
+  .gradient-text {
+    color: #ff3b3b;
+    background: none;
+  }
+}
