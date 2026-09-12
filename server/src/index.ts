@@ -13,9 +13,10 @@ app.set('trust proxy', 1)
 const allowedOrigins = [
   'http://localhost:5173',
   'http://localhost:4173',
-  process.env.FRONTEND_URL,
   'https://desire-exe.my.id',
   'https://www.desire-exe.my.id',
+  'https://desfolio-68ky.onrender.com',
+  process.env.FRONTEND_URL?.replace(/\/$/, ''),
 ].filter(Boolean) as string[]
 
 app.use(
