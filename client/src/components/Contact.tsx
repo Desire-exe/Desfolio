@@ -1,7 +1,9 @@
 import { useState, type FormEvent } from 'react'
 import { motion } from 'framer-motion'
-import { ArrowRight, Check, Loader2, MessageCircle } from 'lucide-react'
+import { ArrowRight, Check, Loader2 } from 'lucide-react'
 import { SectionEyebrow } from './SectionEyebrow'
+import { WhatsAppIcon } from './icons/WhatsAppIcon'
+import { TelegramIcon } from './icons/TelegramIcon'
 
 type Status = 'idle' | 'loading' | 'ok' | 'error'
 
@@ -87,13 +89,23 @@ export function Contact() {
               </button>
 
               <a
-                href="https://wa.me/2348161262401"
+                href="https://wa.me/2348161262401?text=Hi%20Desire%2C%20my%20name%20is%20"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-3 rounded-md border border-border text-text text-sm hover:bg-surface transition-colors"
               >
-                <MessageCircle size={16} strokeWidth={1.75} />
+                <WhatsAppIcon size={16} />
                 Chat on WhatsApp
+              </a>
+
+              <a
+                href="https://t.me/Desire_exe"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-md border border-border text-text text-sm hover:bg-surface transition-colors"
+              >
+                <TelegramIcon size={16} />
+                Chat on Telegram
               </a>
             </div>
           </form>

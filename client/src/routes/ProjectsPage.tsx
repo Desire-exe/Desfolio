@@ -2,8 +2,11 @@ import { motion } from 'framer-motion'
 import { SectionEyebrow } from '@/components/SectionEyebrow'
 import { ProjectCard } from '@/components/ProjectCard'
 import { projects, labs } from '@/data/projects'
+import { usePageTitle } from '@/hooks/usePageTitle'
 
 export function ProjectsPage() {
+  usePageTitle('Projects')
+
   return (
     <section className="relative px-6 md:px-12 pt-32 md:pt-40 pb-24 md:pb-32 z-10">
       <div className="max-w-6xl mx-auto">

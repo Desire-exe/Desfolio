@@ -4,8 +4,8 @@ import { ArrowLeft, ArrowUpRight, Github, Check } from 'lucide-react'
 import { projects } from '@/data/projects'
 import { Lightbox } from '@/components/Lightbox'
 import { useState } from 'react'
+import { usePageTitle } from '@/hooks/usePageTitle'
 
-// Case study content per project (rich content for desire-exe only)
 const caseStudies: Record<string, { highlights: string[]; features: { title: string; desc: string }[] }> = {
   'desire-exe': {
     highlights: [
@@ -17,12 +17,12 @@ const caseStudies: Record<string, { highlights: string[]; features: { title: str
       'Smart session reconnection logic — status 440/428/515 handling with exponential backoff',
     ],
     features: [
-      { title: 'Tiered Dashboard',       desc: 'Free/Basic/Pro/Enterprise with enforced upgrade paths and force-re-login on tier change.' },
-      { title: 'Multi-Session Pairing',  desc: 'Isolated Baileys sockets per linked number, each with its own auth_info store.' },
-      { title: 'Moderation Suite',       desc: 'Anti-link, anti-mention, anti-delete, anti-edit, anti-badwords, warn/kick with 3-strike rules.' },
-      { title: 'Media Pipeline',         desc: 'FFmpeg + Sharp + yt-dlp for stickers, video conversion, and audio extraction.' },
-      { title: 'AI Layer',               desc: 'Gemini chat, image analysis, imagine/animate, upscale, removebg, style transfer.' },
-      { title: 'Web Status Pages',       desc: 'QR / pairing auth, dashboard, docs, dev portal — all mobile-responsive.' },
+      { title: 'Tiered Dashboard',      desc: 'Free/Basic/Pro/Enterprise with enforced upgrade paths and force-re-login on tier change.' },
+      { title: 'Multi-Session Pairing', desc: 'Isolated sessions per linked number, each with its own credential store.' },
+      { title: 'Moderation Suite',      desc: 'Anti-link, anti-mention, anti-delete, anti-edit, anti-badwords, warn/kick with 3-strike rules.' },
+      { title: 'Media Pipeline',        desc: 'FFmpeg + Sharp + yt-dlp for stickers, video conversion, and audio extraction.' },
+      { title: 'AI Layer',              desc: 'Gemini chat, image analysis, imagine/animate, upscale, removebg, style transfer.' },
+      { title: 'Web Status Pages',      desc: 'QR / pairing auth, dashboard, docs, dev portal — all mobile-responsive.' },
     ],
   },
 }
@@ -31,6 +31,8 @@ export function ProjectDetail() {
   const { id } = useParams<{ id: string }>()
   const project = projects.find((p) => p.id === id)
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
+
+  usePageTitle(project?.name ?? 'Not Found')
 
   if (!project) return <Navigate to="/projects" replace />
 
@@ -102,7 +104,6 @@ export function ProjectDetail() {
             )}
           </motion.div>
 
-          {/* Gallery */}
           {project.images.length > 0 && (
             <motion.div
               initial={{ opacity: 0, y: 16 }}
@@ -129,7 +130,6 @@ export function ProjectDetail() {
             </motion.div>
           )}
 
-          {/* Description */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -145,7 +145,6 @@ export function ProjectDetail() {
             </p>
           </motion.div>
 
-          {/* Case study — flagship only */}
           {isFlagship && study && (
             <>
               <motion.div

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://desire-exe.my.id/sitemap.xml

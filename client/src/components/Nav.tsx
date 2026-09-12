@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { Github, FolderCode, User, Mail, MessageCircle } from 'lucide-react'
+import { Github, FolderCode, User, Mail } from 'lucide-react'
+import { WhatsAppIcon } from './icons/WhatsAppIcon'
 
 const links = [
   { to: '/projects', label: 'work',    Icon: FolderCode },
@@ -60,13 +61,13 @@ export function Nav() {
           })}
 
           <a
-            href="https://wa.me/2348161262401"
+            href="https://wa.me/2348161262401?text=Hi%20Desire%2C%20my%20name%20is%20"
             target="_blank"
             rel="noreferrer"
             aria-label="WhatsApp"
             className="ml-1 md:ml-2 inline-flex items-center justify-center p-2 rounded-md text-text-muted hover:text-accent hover:bg-surface transition-colors"
           >
-            <MessageCircle size={16} strokeWidth={1.75} />
+            <WhatsAppIcon size={16} />
           </a>
 
           <a

@@ -1,11 +1,13 @@
-import { Github, Twitter, Linkedin, Mail, MessageCircle } from 'lucide-react'
+import { Github, Linkedin, Mail } from 'lucide-react'
+import { WhatsAppIcon } from './icons/WhatsAppIcon'
+import { TelegramIcon } from './icons/TelegramIcon'
 
 const socials = [
-  { href: 'https://github.com/Desire-exe',        Icon: Github,         label: 'GitHub' },
-  { href: 'https://wa.me/2348161262401',          Icon: MessageCircle,  label: 'WhatsApp' },
-  { href: 'https://twitter.com/yourhandle',       Icon: Twitter,        label: 'Twitter' },
-  { href: 'https://linkedin.com/in/yourhandle',   Icon: Linkedin,       label: 'LinkedIn' },
-  { href: 'mailto:zaddyexe097@gmail.com',         Icon: Mail,           label: 'Email' },
+  { href: 'https://github.com/Desire-exe',                                       Icon: Github,        label: 'GitHub' },
+  { href: 'https://wa.me/2348161262401?text=Hi%20Desire%2C%20my%20name%20is%20', Icon: WhatsAppIcon, label: 'WhatsApp' },
+  { href: 'https://t.me/Desire_exe',                                             Icon: TelegramIcon, label: 'Telegram' },
+  { href: 'https://www.linkedin.com/in/daramola-daniel-a331b3240/',              Icon: Linkedin,      label: 'LinkedIn' },
+  { href: 'mailto:zaddyexe097@gmail.com',                                        Icon: Mail,          label: 'Email' },
 ]
 
 export function Footer() {
@@ -15,7 +17,7 @@ export function Footer() {
         <div className="flex items-center gap-3">
           <img src="/logo-light.png" alt="DΞSIRΞ-ΞXΞ" className="h-6 w-auto object-contain" />
           <span className="font-mono text-xs text-text-muted">
-            built by <span className="text-text">Daramola Daniel</span>
+            built by <span className="text-text">DΞSIRΞ-ΞXΞ</span>
           </span>
         </div>
 
@@ -27,9 +29,10 @@ export function Footer() {
               target="_blank"
               rel="noreferrer"
               aria-label={label}
+              title={label}
               className="inline-flex items-center justify-center p-2 rounded-md text-text-muted hover:text-text hover:bg-surface transition-colors"
             >
-              <Icon size={16} strokeWidth={1.75} />
+              <Icon size={16} />
             </a>
           ))}
         </div>

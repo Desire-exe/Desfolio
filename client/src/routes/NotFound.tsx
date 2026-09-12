@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowLeft, Home } from 'lucide-react'
+import { usePageTitle } from '@/hooks/usePageTitle'
 
 export function NotFound() {
+  usePageTitle('404')
+
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6 md:px-12 z-10">
       <motion.div
@@ -49,6 +52,7 @@ export function NotFound() {
         </div>
 
         <p className="font-mono text-[10px] text-text-muted/60 mt-12 tracking-widest">
+          // 404 · not_found
         </p>
       </motion.div>
     </section>
