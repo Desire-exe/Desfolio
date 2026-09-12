@@ -26,15 +26,6 @@ export default {
       transitionTimingFunction: {
         smooth: 'cubic-bezier(0.22, 1, 0.36, 1)',
       },
-      keyframes: {
-        gradient: {
-          '0%':   { backgroundPosition: '0% 50%' },
-          '100%': { backgroundPosition: '200% 50%' },
-        },
-      },
-      animation: {
-        gradient: 'gradient 3s linear infinite',
-      },
     },
   },
   plugins: [],

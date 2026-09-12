@@ -28,7 +28,13 @@ export function Hero() {
           variants={letterContainer}
           initial="hidden"
           animate="show"
-          className="font-serif italic text-5xl md:text-7xl lg:text-8xl leading-[0.95] text-text select-none"
+          className="font-serif italic text-5xl md:text-7xl lg:text-8xl leading-[0.95] select-none bg-clip-text text-transparent animate-gradient"
+          style={{
+            backgroundImage:
+              'linear-gradient(90deg, #F5EDEE 0%, #FF6B4A 35%, #FF3B3B 55%, #F5EDEE 100%)',
+            backgroundSize: '250% 100%',
+            filter: 'drop-shadow(0 0 30px rgba(255,59,59,0.15))',
+          }}
         >
           {'From database'.split('').map((ch, i) => (
             <motion.span key={i} variants={letter} className="inline-block">
@@ -36,23 +42,11 @@ export function Hero() {
             </motion.span>
           ))}
           <br />
-
-          <motion.span
-            variants={letter}
-            className="inline-block"
-            style={{
-              backgroundImage:
-                'linear-gradient(90deg, #FF3B3B 0%, #FF6B4A 35%, #FF8A00 65%, #FF3B3B 100%)',
-              backgroundSize: '200% 100%',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-              color: 'transparent',
-              animation: 'gradient-shift 4s ease-in-out infinite',
-            }}
-          >
-            to design.
-          </motion.span>
+          {'to design.'.split('').map((ch, i) => (
+            <motion.span key={`b-${i}`} variants={letter} className="inline-block">
+              {ch === ' ' ? '\u00A0' : ch}
+            </motion.span>
+          ))}
         </motion.h1>
 
         <motion.div
@@ -68,7 +62,7 @@ export function Hero() {
           className="font-sans text-base md:text-lg text-text-muted mt-8 max-w-xl leading-relaxed"
         >
           <Typewriter
-            text="I build web products end to end · React on the front, Node and PostgreSQL on the back."
+            text="I build web products end to end · React on the front · Node on the back · real users in between."
             speed={18}
             delay={1400}
           />
