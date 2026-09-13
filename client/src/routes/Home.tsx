@@ -5,8 +5,10 @@ import { Hero } from '@/components/Hero'
 import { ProjectCard } from '@/components/ProjectCard'
 import { SectionEyebrow } from '@/components/SectionEyebrow'
 import { projects } from '@/data/projects'
+import { usePageTitle } from '@/hooks/usePageTitle'
 
 export function Home() {
+  usePageTitle()
   const featured = projects.slice(0, 2)
 
   return (
@@ -14,7 +16,7 @@ export function Home() {
       <Hero />
 
       {/* Featured projects */}
-      <section className="relative px-6 md:px-12 py-24 md:py-32 z-10">
+      <section id="selected-work" className="relative px-6 md:px-12 py-24 md:py-32 z-10 scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <SectionEyebrow number="01" label="Selected Work" />
 
