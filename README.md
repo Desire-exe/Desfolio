@@ -1,9 +1,9 @@
 
 <div align="center">
 
-<h1>
-  <span style="color:#FF3B3B; font-family:Georgia, serif; font-style:italic; font-size: 3rem; letter-spacing: -0.02em;">DΞSIRΞ-ΞXΞ</span>
-</h1>
+<img src="https://desire-exe.my.id/logo-light.png" alt="DΞSIRΞ-ΞXΞ" height="48" />
+
+<br/><br/>
 
 <img src="https://desire-exe.my.id/og-image.png" alt="DΞSIRΞ-ΞXΞ — Full Stack Web Developer" width="100%" />
 
@@ -18,6 +18,18 @@
     <img src="https://img.shields.io/badge/LIVE-desire--exe.my.id-FF3B3B?style=for-the-badge&labelColor=0B0708" alt="Live" />
   </a>
   <img src="https://visitor-badge.laobi.icu/badge?page_id=Desire-exe.Desfolio&left_text=visitors&left_color=0B0708&right_color=FF3B3B" alt="Visitors" />
+</p>
+
+<p>
+  <a href="https://github.com/Desire-exe/Desfolio/stargazers">
+    <img src="https://img.shields.io/github/stars/Desire-exe/Desfolio?style=for-the-badge&color=FF3B3B&labelColor=0B0708&label=STARS" alt="Stars" />
+  </a>
+  <a href="https://github.com/Desire-exe/Desfolio/network/members">
+    <img src="https://img.shields.io/github/forks/Desire-exe/Desfolio?style=for-the-badge&color=FF6B4A&labelColor=0B0708&label=FORKS" alt="Forks" />
+  </a>
+  <a href="https://github.com/Desire-exe/Desfolio/watchers">
+    <img src="https://img.shields.io/github/watchers/Desire-exe/Desfolio?style=for-the-badge&color=FF3B3B&labelColor=0B0708&label=WATCHERS" alt="Watchers" />
+  </a>
 </p>
 
 </div>
@@ -45,9 +57,12 @@
 ## **STRUCTURE**
 
 ```
+
 Desfolio/
 ├── client/          Vite · React · TypeScript frontend
-└──  server/          Express · Prisma backend
+├── server/          Express · Prisma backend
+└── README.md        you are here
+
 ```
 
 ---
@@ -64,13 +79,13 @@ npm run dev:server
 npm run dev
 ```
 
-Live at → **http://localhost:5173**
+Live at → http://localhost:5173
 
 ---
 
 <div align="center">
 
-### **CONNECT**
+CONNECT
 
 <p>
   <a href="https://github.com/Desire-exe">
@@ -96,9 +111,11 @@ Live at → **http://localhost:5173**
 
 <div align="center">
 
-<sub><em>built by <a href="https://github.com/Desire-exe"><strong>DΞSIRΞ-ΞXΞ</strong></a></em></sub>
+<sub><em>built by <a href="https://github.com/Desire-exe"><strong>Daramola Daniel</strong></a></em></sub>
 
-<br/><br/>
+
+
+
 
 <sub><em>I build to learn. I break to understand. I fix to grow.</em></sub>
 
