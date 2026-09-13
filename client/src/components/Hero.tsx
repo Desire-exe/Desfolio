@@ -4,6 +4,7 @@ import { ArrowRight, Github } from 'lucide-react'
 import { fadeUp, letter, letterContainer, stagger } from '@/lib/motion'
 import { Typewriter } from './Typewriter'
 import { useMagnetic } from '@/hooks/useMagnetic'
+import { ScrollHint } from './ScrollHint'
 
 export function Hero() {
   const ctaRef = useMagnetic<HTMLAnchorElement>(0.2)
@@ -94,6 +95,8 @@ export function Hero() {
           </a>
         </motion.div>
       </motion.div>
+
+      <ScrollHint />
     </section>
   )
 }
