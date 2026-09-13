@@ -47,8 +47,7 @@
 ```
 Desfolio/
 ├── client/          Vite · React · TypeScript frontend
-├── server/          Express · Prisma backend
-└── README.md        you are here
+└──  server/          Express · Prisma backend
 ```
 
 ---
