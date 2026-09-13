@@ -111,7 +111,7 @@ CONNECT
 
 <div align="center">
 
-<sub><em>built by <a href="https://github.com/Desire-exe"><strong>Daramola Daniel</strong></a></em></sub>
+<sub><em>built by <a href="https://github.com/Desire-exe"><strong>DΞSIRΞ-ΞXΞ </strong></a></em></sub>
 
 
 
